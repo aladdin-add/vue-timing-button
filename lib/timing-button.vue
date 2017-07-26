@@ -1,0 +1,61 @@
+<template>
+<button @click="clickFn" :disabled="!clickable">{{message}}</button>
+</template>
+
+
+<script>
+export default {
+  name: "timing-button",
+  // TODO: 可配置参数
+  props: {
+    "initalSeconds": {
+      type: Number,
+      required: false,
+      default: 60
+    },
+    "initalMessage": {
+      type: String,
+      required: false,
+      default: "点击发送验证码"
+    },
+    "cb": {
+      type: Function,
+      required: false,
+      default: function () {
+        console.log("you clicked the button");
+      }
+    }
+  },
+  data: function () {
+    return {
+      message: this.initalMessage,
+      seconds: this.initalSeconds,
+      clickable: true,
+      intv: null
+    };
+  },
+  methods:{
+    clickFn() {
+      this.clickable = false;
+
+      // 每隔 1s 更新文案
+      this.intv = window.setInterval(() => {
+        if (this.seconds-- > 0) {
+          this.message = `${this.seconds}s后可再次发送`;
+        } else {
+          this.reset();
+        }
+      }, 1000);
+    },
+    reset() {
+      window.clearInterval(this.intv);
+      this.clickable = true;
+      this.seconds = this.initalSeconds;
+      this.message = this.initalMessage;
+    }
+  }
+};
+</script>
+
+<style lang="stylus">
+</style>
