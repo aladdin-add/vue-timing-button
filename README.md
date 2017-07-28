@@ -40,6 +40,9 @@ yarn add vue-timing-button
 import vueTimingButton from 'vue-timing-button'; // esm.
 const vueTimingButton = requre('vue-timing-button'); // cjs.
 ```
+```html
+<timing-button :inital-seconds="5"></timing-button>
+```
 ### Props
 Name | required | default | Description
 ----- | ----- | ----- | -----
