@@ -37,10 +37,16 @@ yarn add vue-timing-button
 ### Usage
 
 ```js
-import vueTimingButton from 'vue-timing-button';
-Vue.use(vueTimingButton);
+import vueTimingButton from 'vue-timing-button'; // esm.
+const vueTimingButton = requre('vue-timing-button'); // cjs.
 ```
-
+### Props
+Name | required | default | Description
+----- | ----- | ----- | -----
+initalSeconds | ❌ | 60 | 间隔x秒可再次点击
+initalMessage | ❌ | "点击发送验证码" | 默认展示文字
+initalSeconds | ❌ | "{{seconds}}s后可再次发送" | 点击后展示文字,可以使用{{seconds}}代替第x秒
+cb | ❌ | () => console.log("you clicked the button") | 点击后需执行的回调函数
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
