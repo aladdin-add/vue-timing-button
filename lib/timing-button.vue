@@ -1,5 +1,5 @@
 <template>
-<button v-bind="$attrs" @click="clickFn" :disabled="!clickable">{{message}}</button>
+<button @reset="reset" v-bind="$attrs" @click="clickFn" :disabled="!clickable">{{message}}</button>
 </template>
 
 
@@ -53,7 +53,7 @@ export default {
       }, 1000);
     },
     reset() {
-      window.clearInterval(this.intv);
+      this.intv && window.clearInterval(this.intv);
       this.clickable = true;
       this.seconds = this.initalSeconds;
       this.message = this.initalMessage;
