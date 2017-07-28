@@ -23,7 +23,7 @@ A Vue.js component
     <img src="https://img.shields.io/github/issues/https://github.com/Aladdin-ADD/vue-timing-button.svg?style=flat-square" alt="Issues" />
   </a>
 </p>
-
+<img src="https://vanya.convertio.me/p/TZACZM2yCcyb4G8m7r5nXA/edbb174055c8bc72a39321376434fb34/Opera-Neon-2017_7_29-星期六-5_15_41.gif"/>
 ### Installation
 ```
 npm install --save vue-timing-button
