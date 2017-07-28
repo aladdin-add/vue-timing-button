@@ -4,7 +4,7 @@
 	(global.timingButton = factory());
 }(this, (function () {
 
-var timingButton$1 = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{attrs:{"disabled":!_vm.clickable},on:{"click":_vm.clickFn}},[_vm._v(_vm._s(_vm.message))])},staticRenderFns: [],
+var timingButton$1 = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',_vm._b({attrs:{"disabled":!_vm.clickable},on:{"click":_vm.clickFn}},'button',_vm.$attrs,false),[_vm._v(_vm._s(_vm.message))])},staticRenderFns: [],
   name: "timing-button",
   // TODO: 可配置参数
   props: {
