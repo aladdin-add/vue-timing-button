@@ -1,5 +1,5 @@
 <template>
-<button @click="clickFn" :disabled="!clickable">{{message}}</button>
+<button v-bind="$attrs" @click="clickFn" :disabled="!clickable">{{message}}</button>
 </template>
 
 
