@@ -18,6 +18,11 @@ var timingButton$1 = {render: function(){var _vm=this;var _h=_vm.$createElement;
       required: false,
       default: "点击发送验证码"
     },
+    "waitingMessage": {
+      type: String,
+      required: false,
+      default: "{{seconds}}s后可再次发送"
+    },
     "cb": {
       type: Function,
       required: false,
@@ -43,7 +48,7 @@ var timingButton$1 = {render: function(){var _vm=this;var _h=_vm.$createElement;
       // 每隔 1s 更新文案
       this.intv = window.setInterval(function () {
         if (this$1.seconds-- > 0) {
-          this$1.message = (this$1.seconds) + "s后可再次发送";
+          this$1.message = this$1.waitingMessage.replace(/{{ *seconds *}}/g, this$1.seconds);
         } else {
           this$1.reset();
         }

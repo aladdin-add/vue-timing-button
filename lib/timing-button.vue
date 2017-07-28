@@ -18,6 +18,11 @@ export default {
       required: false,
       default: "点击发送验证码"
     },
+    "waitingMessage": {
+      type: String,
+      required: false,
+      default: "{{seconds}}s后可再次发送"
+    },
     "cb": {
       type: Function,
       required: false,
@@ -41,7 +46,7 @@ export default {
       // 每隔 1s 更新文案
       this.intv = window.setInterval(() => {
         if (this.seconds-- > 0) {
-          this.message = `${this.seconds}s后可再次发送`;
+          this.message = this.waitingMessage.replace(/{{ *seconds *}}/g, this.seconds);
         } else {
           this.reset();
         }
