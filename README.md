@@ -24,6 +24,7 @@ A Vue.js component
   </a>
 </p>
 <img src="http://chuantu.biz/t5/153/1501277235x3683603338.gif"/>
+
 ### Installation
 ```
 npm install --save vue-timing-button
