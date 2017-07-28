@@ -25,10 +25,18 @@ rollup({
 })
   .then(function (bundle) {
     var code = bundle.generate({
+      format: 'es',
+      moduleName: 'timingButton',
+    }).code
+    write('dist/bundle.esm.js', code).then(function () {
+      return code
+    })
+    var code = bundle.generate({
       format: 'umd',
       moduleName: 'timingButton',
       useStrict: false
     }).code
+
     return write('dist/bundle.js', code).then(function () {
       return code
     })
@@ -36,9 +44,7 @@ rollup({
   .then(function (code) {
     var minified = uglify.minify(code, {
       fromString: true,
-      output: {
-        ascii_only: true
-      }
+      output: {}
     }).code
     return write('dist/bundle.min.js', minified)
   })

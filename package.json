@@ -2,8 +2,8 @@
   "name": "vue-timing-button",
   "version": "0.0.0",
   "description": "A Vue.js project",
-  "jsnext": "dist/bundle.js",
-  "main": "dist/bundle.common.js",
+  "pkg": "dist/bundle.esm.js",
+  "main": "dist/bundle.min.js",
   "directories": {
     "test": "test"
   },
