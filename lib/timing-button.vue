@@ -42,6 +42,7 @@ export default {
   methods:{
     clickFn() {
       this.clickable = false;
+      this.cb();
 
       // 每隔 1s 更新文案
       this.intv = window.setInterval(() => {
