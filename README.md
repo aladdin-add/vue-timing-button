@@ -23,7 +23,7 @@ A Vue.js component
     <img src="https://img.shields.io/github/issues/https://github.com/Aladdin-ADD/vue-timing-button.svg?style=flat-square" alt="Issues" />
   </a>
 </p>
-<img src="http://chuantu.biz/t5/153/1501277235x3683603338.gif"/>
+<img src="http://chuantu.biz/t5/153/1501278179x2918527176.gif"/>
 
 ### Installation
 ```
