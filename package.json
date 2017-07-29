@@ -11,13 +11,14 @@
     "purge": "rm -rf dist/*",
     "compile": "node build.js",
     "build": "npm run purge && npm run compile",
-    "lint": "eslint src/* test/*",
+    "lint": "eslint lib/* test/*",
     "beforePublish": "npm run lint && npm run build",
     "test": "echo 'Error: no test specified"
   },
   "files": [
     "dist/",
-    "src/"
+    "lib/",
+    "example/"
   ],
   "author": "薛定谔的猫 <hh_2013@foxmail.com>",
   "license": "MIT",
